@@ -177,3 +177,26 @@ body::before {
 .fa-brands:hover {
     color: var(--soft-red);
 }
+
+@media screen and (min-width: 1024px) {
+    .card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card > span::before {
+        width: 150px;
+        height: 75px;
+    }
+
+    .main-container {
+        height: 700px;
+        justify-content: space-around;
+    }
+
+    .countdown-container {
+        height: auto;
+    }
+
+
+}
