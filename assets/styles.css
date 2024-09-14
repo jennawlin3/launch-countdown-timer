@@ -102,7 +102,7 @@ body::before {
     height: 100px;
     background: linear-gradient(to bottom, #2c2c44 50%, #343551 50%);
     border-radius: 5px;
-    box-shadow: 1px 5px 1px var(--very-darker-blue);
+    box-shadow: 1px 8px 1px var(--very-darker-blue);
     margin-bottom: 15px;
     position: relative;
     overflow-x: hidden;
