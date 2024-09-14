@@ -198,5 +198,11 @@ body::before {
         height: auto;
     }
 
+    .card span {
+        font-size: 5rem;
+    }
 
+    .container p {
+        font-size: 1rem;
+    }
 }
