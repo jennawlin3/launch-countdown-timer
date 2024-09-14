@@ -134,7 +134,11 @@ body::before {
     font-weight: 700;
 }
 
-.card span::before {
+.card.active {
+    background: linear-gradient(to bottom, #343551 50%, #2c2c44 50%);
+}
+
+.card > span::before {
     content: "";
     position: absolute;
     width: 100px;
@@ -145,16 +149,19 @@ body::before {
     left: 50%;
     transform: translateX(-50%);
     opacity: .3;
-    animation: moveDown 2s ease-in-out;
 }
 /*
-@keyframes moveDown {
-    0% {
-        top: 0;
-    }
-    100% {
-        top: 50px;
-    }
+.card.active > span::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: var(--very-dark-blue);
+    z-index: 100;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .3;
 }
 */
 .social-media_container {

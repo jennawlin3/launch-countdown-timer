@@ -2,6 +2,12 @@ const $daySpan = document.querySelector(".day");
 const $hourSpan = document.querySelector(".hour");
 const $minuteSpan = document.querySelector(".minute");
 const $secondSpan = document.querySelector(".second");
+let days;
+let hours;
+let minutes;
+let seconds;
+
+const $cards = document.querySelectorAll(".card");
 
 function countdown () {
 setInterval(() => {
@@ -10,10 +16,10 @@ setInterval(() => {
 
     let distance = dateFuture - dateToday;
     
-    let days = Math.floor(Number(distance) / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    days = Math.floor(Number(distance) / (1000 * 60 * 60 * 24));
+    hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     if(days < 10) {
         $daySpan.textContent = "0" + days;
