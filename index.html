@@ -5,9 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css">
+  <link rel="stylesheet" href="./assets/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="./assets/fontawesome/css/solid.css">
+  <link rel="stylesheet" href="./assets/styles.css">
   <title>Frontend Mentor | Launch countdown timer</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,17 +20,47 @@
   </style>
 </head>
 <body>
+  <main class="main-container">
+    <section class="countdown-container">
+      <h1>We´re launching soon</h1>
+      <div class="countdown">
+      <div class="days-container container">
+        <div class="days-card card">
+          <span class="day">00</span>
+        </div>
+        <p>Days</p>
+      </div>
+      <div class="hours-container container">
+        <div class="hours-car card">
+          <span class="hour">00</span>
+        </div>
+        <p>Hours</p>
+      </div>
+      <div class="minutes-container container">
+        <div class="minutes-card card">
+          <span class="minute">00</span>
+        </div>
+        <p>Minutes</p>
+      </div>
+      <div class="seconds-container container">
+        <div class="seconds-card card">
+          <span class="second">00</span>
+        </div>
+        <p>Second</p>
+      </div>
+      </div>
+    </section>
+    <section class="social-media_container">
+      <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+      <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
 
-  We're launching soon
-
-  Days
-  Hours
-  Minutes
-  Seconds
-  
+    </section>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.linkedin.com/in/jenn-acosta7/">Jenn Acosta</a>.
   </div>
+  <script src="./app/app.js"></script>
 </body>
 </html>

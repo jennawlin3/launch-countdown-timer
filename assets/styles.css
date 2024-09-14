@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --grayish-blue: hsl(237, 18%, 59%);
+    --soft-red: hsl(345, 95%, 68%);
+    --white: hsl(0, 0%, 100%);
+    --dark-desaturated-blue: hsl(236, 21%, 26%);
+    --very-dark-blue: hsl(235, 16%, 14%);
+    --very-darker-blue: hsl(234, 17%, 12%);
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background: linear-gradient(var(--very-darker-blue) 30%, #2f2439);
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    background: url(../assets/images/pattern-hills.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.main-container, .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    background: url(../assets/images/bg-stars.svg);
+    z-index: -1;
+}
+
+.attribution a {
+    color: #ddd;
+}
+
+.countdown-container { 
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.countdown-container h1 {
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 60px;
+}
+
+.countdown {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.countdown .container {
+    width: 100%;
+}
+
+.container p {
+    color: var(--grayish-blue);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.card {
+    width: 90px;
+    height: 100px;
+    background: linear-gradient(to bottom, #2c2c44 50%, #343551 50%);
+    border-radius: 5px;
+    box-shadow: 1px 5px 1px var(--very-darker-blue);
+    margin-bottom: 15px;
+    position: relative;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+}
+
+.card::before, .card::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--very-darker-blue);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);  
+}
+
+.card::before {
+    left: -5px;    
+}
+
+.card::after {
+    right: -5px;  
+}
+
+.card span {
+    color: var(--soft-red);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.card span::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: var(--very-dark-blue);
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .3;
+    animation: moveDown 2s ease-in-out;
+}
+/*
+@keyframes moveDown {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 50px;
+    }
+}
+*/
+.social-media_container {
+    display: flex;
+    gap: 30px;
+}
+
+.fa-brands {
+    font-size: 2rem;
+    color: var(--grayish-blue);
+}
+
+.fa-brands:hover {
+    color: var(--soft-red);
+}
